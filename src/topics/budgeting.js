@@ -9,21 +9,36 @@ const budgeting = {
       "Types of Budgets: 50/30/20 Rule: 50% for needs (food, rent, bills), 30% for wants (entertainment, dining out), 20% for savings. Zero-Based Budget: Every rupee is assigned a job, ensuring all income is allocated to expenses, savings, or debt repayment. Envelope System: Cash is divided into envelopes for different spending categories, helping control overspending., Zero-Based Budgeting:Assign every single rupee a job (e.g., bills, savings, fun). The goal is to have no money left unassigned. Envelope System: Divide cash into different envelopes for various categories like entertainment, food, and savings.",
     ],
     quizzes: [
-      {
-        question: "What is budgeting?",
-        options: ["Spending freely", "Planning expenses", "Ignoring income"],
-        answer: 1
-      },
-      {
-        question: "Why save money?",
-        options: ["To waste later", "For emergencies", "To impress friends"],
-        answer: 1
-      },
-      {
-        question: "What helps you make financial decisions?",
-        options: ["Guessing", "Tracking expenses", "Buying more"],
-        answer: 1
-      }
+    {
+      question: "What is budgeting?",
+      options: ["Spending freely", "Planning expenses", "Ignoring income"],
+      answer: 1
+    },
+    {
+      question: "Why save money?",
+      options: ["To waste later", "For emergencies", "To impress friends"],
+      answer: 1
+    },
+    {
+      question: "What helps you make financial decisions?",
+      options: ["Guessing", "Tracking expenses", "Buying more"],
+      answer: 1
+    },
+    {
+      question: "Which of the following is a benefit of budgeting?",
+      options: ["Running out of money", "Not having enough for future goals", "Saving for future needs"],
+      answer: 2
+    },
+    {
+      question: "Which budget system assigns every rupee a specific job?",
+      options: ["50/30/20 Rule", "Zero-Based Budget", "Envelope System"],
+      answer: 1
+    },
+    {
+      question: "What percentage of income is typically allocated for savings in the 50/30/20 rule?",
+      options: ["50%", "30%", "20%"],
+      answer: 2
+    },
     ]
   };
   
