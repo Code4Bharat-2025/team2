@@ -12,12 +12,19 @@ function TopicSelectionPage() {
           <Link
             key={topic.id}
             to={`/learn/${topic.id}`}
-            className="w-60 h-24 bg-white border-2 border-base-300 rounded-full shadow-md flex items-center justify-center space-x-2 hover:bg-yellow-100 transition"
+            className="w-60 h-24 bg-gradient-to-r from-pink-200 to-yellow-100 border-2 border-pink-300 rounded-full shadow-lg flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-200"
           >
             <div className="text-3xl">{topic.icon}</div>
             <h2 className="text-lg font-semibold text-gray-700">{topic.name}</h2>
           </Link>
         ))}
+        <Link
+          to="/tool/budget"
+          className="w-60 h-24 bg-gradient-to-r from-teal-200 to-cyan-100 border-2 border-teal-300 rounded-full shadow-md flex items-center justify-center space-x-2 hover:scale-105 transition"
+        >
+          <div className="text-3xl">🧮</div>
+          <h2 className="text-lg font-semibold text-gray-700">Budget Calculator</h2>
+        </Link>
         <div className="absolute bottom-0 translate-y-8">
           <div className="text-5xl animate-bounce">🦉</div>
         </div>

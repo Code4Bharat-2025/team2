@@ -4,7 +4,7 @@ import Quiz from "./Quiz";
 
 function TopicTemplate({ topic }) {
   const [unlockedLevel, setUnlockedLevel] = useState(0);
-  const [showQuiz, setShowQuiz] = useState(false);
+  const [activeLevel, setActiveLevel] = useState(null);
 
   useEffect(() => {
     const stored = localStorage.getItem(`progress_${topic.id}`);
@@ -17,13 +17,13 @@ function TopicTemplate({ topic }) {
       setUnlockedLevel(nextLevel);
       localStorage.setItem(`progress_${topic.id}`, nextLevel);
     }
-    setShowQuiz(false);
+    setActiveLevel(null);
   };
 
   const resetProgress = () => {
     localStorage.removeItem(`progress_${topic.id}`);
     setUnlockedLevel(0);
-    setShowQuiz(false);
+    setActiveLevel(null);
   };
 
   const progressPercent = Math.round(((unlockedLevel + 1) / topic.levels.length) * 100);
@@ -39,19 +39,34 @@ function TopicTemplate({ topic }) {
         <div className="bg-green-500 h-4 rounded-full transition-all" style={{ width: `${progressPercent}%` }}></div>
       </div>
 
-      <div className="space-y-4">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {topic.levels.map((text, index) => (
-          <div key={index} className={`p-4 rounded-lg shadow ${index === 0 ? 'bg-yellow-100' : index === 1 ? 'bg-blue-100' : 'bg-green-100'} ${index > unlockedLevel ? 'opacity-50 blur-sm' : ''}`}>
-            Level {index + 1}: {index > unlockedLevel ? 'Locked 🔒' : text}
-          </div>
+          <button
+            key={index}
+            className={`p-4 rounded-lg text-left font-semibold shadow hover:scale-105 transition ${index === 0 ? 'bg-yellow-100' : index === 1 ? 'bg-blue-100' : 'bg-green-100'} ${index > unlockedLevel ? 'opacity-50 blur-sm cursor-not-allowed' : ''}`}
+            onClick={() => index <= unlockedLevel && setActiveLevel(index)}
+            disabled={index > unlockedLevel}
+          >
+            Level {index + 1}
+          </button>
         ))}
-        {unlockedLevel < topic.levels.length && !showQuiz && (
-          <div className="mt-6">
-            <button className="btn btn-primary" onClick={() => setShowQuiz(true)}>Take Quiz for Level {unlockedLevel + 1}</button>
-          </div>
-        )}
-        {showQuiz && <Quiz questionData={topic.quizzes[unlockedLevel]} onComplete={handleQuizComplete} />}
       </div>
+
+      {activeLevel !== null && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-xl w-full max-w-md shadow-xl relative">
+            <button
+              onClick={() => setActiveLevel(null)}
+              className="absolute top-2 right-2 text-gray-500 hover:text-black"
+            >✖️</button>
+            <h3 className="text-xl font-bold mb-2">Level {activeLevel + 1}</h3>
+            <p className="mb-4">{topic.levels[activeLevel]}</p>
+            {activeLevel === unlockedLevel && (
+              <Quiz questionData={topic.quizzes[activeLevel]} onComplete={handleQuizComplete} />
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
