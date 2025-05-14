@@ -6,7 +6,8 @@ const banking = {
     levels: [
       "Banks help you keep your money safe.",
       "Savings accounts earn interest over time.",
-      "Digital banking offers 24/7 access to funds."
+      "Digital banking offers 24/7 access to funds.",
+      "Different Kinds of Banks: There are many types of banks: Big banks help everyone—kids, parents, and shops. Village banks help farmers and small towns. Online banks work on phones and computers—no buildings!"
     ],
     quizzes: [
       {
