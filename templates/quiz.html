@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>Finance Quiz</h1>
+</header>
+<main>
+    <form method="POST">
+        <label for="q1">1. What is money?</label><br>
+        <input type="radio" name="q1" value="a" required> Paper used for transactions<br>
+        <input type="radio" name="q1" value="b"> Just numbers on a screen<br>
+        <input type="radio" name="q1" value="c"> Something you find in a bank<br>
+
+        <label for="q2">2. What is a budget?</label><br>
+        <input type="radio" name="q2" value="a"> A way to save money<br>
+        <input type="radio" name="q2" value="b" required> A plan for spending money<br>
+        <input type="radio" name="q2" value="c"> A type of investment<br>
+
+        <label for="q3">3. What is savings?</label><br>
+        <input type="radio" name="q3" value="a"> Money you spend on things you like<br>
+        <input type="radio" name="q3" value="b"> Money that is borrowed<br>
+        <input type="radio" name="q3" value="c" required> Money put aside for future use<br>
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+</body>
+</html>
