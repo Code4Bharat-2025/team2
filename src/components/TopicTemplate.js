@@ -62,7 +62,10 @@ function TopicTemplate({ topic }) {
             <h3 className="text-xl font-bold mb-2">Level {activeLevel + 1}</h3>
             <p className="mb-4">{topic.levels[activeLevel]}</p>
             {activeLevel === unlockedLevel && (
+            <div>
               <Quiz questionData={topic.quizzes[activeLevel]} onComplete={handleQuizComplete} />
+                <a className="text-blue-600 hover:underline font-semibold" href="http://localhost:5000/quiz">quiz</a>
+            </div>
             )}
           </div>
         </div>
