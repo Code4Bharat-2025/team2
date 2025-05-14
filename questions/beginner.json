@@ -1,0 +1,94 @@
+{
+  "q1": {
+    "question": "What is money?",
+    "options": {
+      "a": "Paper used for transactions",
+      "b": "Just numbers on a screen",
+      "c": "Something you find in a bank"
+    },
+    "answer": "a"
+  },
+  "q2": {
+    "question": "What is a budget?",
+    "options": {
+      "a": "A way to save money",
+      "b": "A plan for spending money",
+      "c": "A type of investment"
+    },
+    "answer": "b"
+  },
+  "q3": {
+    "question": "What is savings?",
+    "options": {
+      "a": "Money you spend on things you like",
+      "b": "Money that is borrowed",
+      "c": "Money put aside for future use"
+    },
+    "answer": "c"
+  },
+  "q4": {
+    "question": "What is an expense?",
+    "options": {
+      "a": "Money you earn",
+      "b": "Money you spend",
+      "c": "Money you save"
+    },
+    "answer": "b"
+  },
+  "q5": {
+    "question": "What is an investment?",
+    "options": {
+      "a": "Money you spend on groceries",
+      "b": "Money put into something to earn a return",
+      "c": "Money you keep in your wallet"
+    },
+    "answer": "b"
+  },
+  "q6": {
+    "question": "What is interest?",
+    "options": {
+      "a": "A fee for borrowing money",
+      "b": "A type of tax",
+      "c": "Money you earn from savings"
+    },
+    "answer": "a"
+  },
+  "q7": {
+    "question": "What is a loan?",
+    "options": {
+      "a": "Money you give to someone",
+      "b": "Money you borrow and pay back later",
+      "c": "Money you save in a bank"
+    },
+    "answer": "b"
+  },
+  "q8": {
+    "question": "What is a credit card?",
+    "options": {
+      "a": "A card used to borrow money",
+      "b": "A card used to save money",
+      "c": "A card used to earn interest"
+    },
+    "answer": "a"
+  },
+  "q9": {
+    "question": "What is a bank?",
+    "options": {
+      "a": "A place to keep your money safe",
+      "b": "A place to spend your money",
+      "c": "A place to earn money"
+    },
+    "answer": "a",
+    "explanation": "A bank is a financial institution that accepts deposits from the public and creates credit. Banks provide a safe place to store money and offer various financial services."
+  },
+  "q10": {
+    "question": "What is a financial goal?",
+    "options": {
+      "a": "A plan for spending money",
+      "b": "A target for saving or investing money",
+      "c": "A way to earn money"
+    },
+    "answer": "b",
+    "explanation": "A financial goal is a specific objective that a person aims to achieve with their money, such as saving for a vacation, buying a house, or planning for retirement."
+  }
+}
