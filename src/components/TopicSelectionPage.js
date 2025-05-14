@@ -6,7 +6,7 @@ import topicData from "../topics";
 function TopicSelectionPage() {
   return (
     <div className="min-h-screen bg-base-200 flex flex-col items-center p-6">
-      <h1 className="text-4xl font-extrabold text-primary mb-6">Smart Money Quest</h1>
+      <h1 className="text-4xl font-extrabold text-primary mb-6">Financial Literacy</h1>
       <div className="relative flex flex-col items-center space-y-6">
         {topicData.map((topic) => (
           <Link
